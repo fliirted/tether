@@ -1,0 +1,36 @@
+#messagewrapper {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.chatwrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.chatuser {
+    margin: 20px 0px 0px 0px;
+    font-weight: bold;
+    background-color: #eee;
+}
+
+.chatmessage {
+    margin: 0px;
+    background-color: #eee;
+}
+
+.rchatmessage {
+    margin: 0px;
+    background-color: #eee;
+}
+
+.mymessage {
+    margin: 20px 0px 0px 0px;
+    background-color: #cfc;
+}
+
+.rmymessage {
+    margin: 0px;
+    background-color: #cfc;
+}
