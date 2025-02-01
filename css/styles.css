@@ -2,6 +2,8 @@
     padding: 10px;
     display: flex;
     flex-direction: column;
+    overflow-y: auto;
+    height: calc(100vh - 60px);
 }
 
 .chatwrapper {
@@ -33,4 +35,8 @@
 .rmymessage {
     margin: 0px;
     background-color: #cfc;
+}
+
+.reply {
+    float: right;
 }

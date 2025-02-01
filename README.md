@@ -22,7 +22,7 @@
 - Chat differentiation using JS and CSS
 
 ## Planned Features
-- Reply system
+- (Functional) Reply system
 - Message reactions
 - User-friendly styled interface
 - Image sending & Account system (far future)

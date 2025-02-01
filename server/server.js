@@ -1,6 +1,7 @@
 const http = require('http');
 const WebSocket = require('ws');
 const PORT = 8080;
+let msgid = 0;
 
 const logs = []
 
@@ -18,9 +19,12 @@ wss.on('connection', (ws) => {
 
   ws.on('message', (data) => {
     const parsed = JSON.parse(data);
-    const { user, message } = parsed;
+    let { user, message, messageid } = parsed;
 
-    const newMessage = { user, message };
+    messageid = msgid.toString();
+
+    const newMessage = { user, message, messageid };
+    console.log(newMessage);
     logs.push(newMessage);
 
     wss.clients.forEach(client => {
@@ -28,6 +32,8 @@ wss.on('connection', (ws) => {
         client.send(JSON.stringify({type: 'message', newMessage}));
       }
     })
+
+    msgid += 1;
   });
 
   ws.on('close', () => {
